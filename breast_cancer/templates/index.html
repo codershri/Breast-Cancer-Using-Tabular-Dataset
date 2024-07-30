@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+</head>
+<body>
+    <h1>Breast Cancer Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="mean_radius">Mean Radius:</label><br>
+        <input type="text" id="mean_radius" name="mean_radius" placeholder="Enter mean radius"><br>
+
+        <label for="mean_texture">Mean Texture:</label><br>
+        <input type="text" id="mean_texture" name="mean_texture" placeholder="Enter mean texture"><br>
+
+        <label for="mean_perimeter">Mean Perimeter:</label><br>
+        <input type="text" id="mean_perimeter" name="mean_perimeter" placeholder="Enter mean perimeter"><br>
+
+        <label for="mean_area">Mean Area:</label><br>
+        <input type="text" id="mean_area" name="mean_area" placeholder="Enter mean area"><br>
+
+        <label for="mean_smoothness">Mean Smoothness:</label><br>
+        <input type="text" id="mean_smoothness" name="mean_smoothness" placeholder="Enter mean smoothness"><br>
+
+        <label for="mean_compactness">Mean Compactness:</label><br>
+        <input type="text" id="mean_compactness" name="mean_compactness" placeholder="Enter mean compactness"><br>
+
+        <label for="mean_concavity">Mean Concavity:</label><br>
+        <input type="text" id="mean_concavity" name="mean_concavity" placeholder="Enter mean concavity"><br>
+
+        <label for="mean_concave_points">Mean Concave Points:</label><br>
+        <input type="text" id="mean_concave_points" name="mean_concave_points" placeholder="Enter mean concave points"><br>
+
+        <label for="mean_symmetry">Mean Symmetry:</label><br>
+        <input type="text" id="mean_symmetry" name="mean_symmetry" placeholder="Enter mean symmetry"><br>
+
+        <label for="mean_fractal_dimension">Mean Fractal Dimension:</label><br>
+        <input type="text" id="mean_fractal_dimension" name="mean_fractal_dimension" placeholder="Enter mean fractal dimension"><br>
+
+        <!-- Add more input fields for other features -->
+
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_text %}
+    <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
